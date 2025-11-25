@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/about-me.css" />
+    <link rel="shortcut icon" href="../img/logo/logo.png" type="image/x-icon" />
+    <title>About — Esmira Aghamedova</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../img/logo/logo.png" alt="logo"
+          /></a>
+        </div>
+        <nav>
+          <div class="nav-pill">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li>
+                <a href="./about-me.html" aria-current="page">About Me</a>
+              </li>
+              <li><a href="./my-projects.html">Portfolio</a></li>
+              <li><a href="./contact-me.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+          title="Toggle theme"
+        >
+          <span class="icon">🌙</span>
+          <span class="label">Dark</span>
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <section class="card about-card">
+        <div class="about-grid">
+          <div class="avatar">
+            <img src="../img/logo/logo.png" alt="Esmira avatar" />
+          </div>
+          <div class="about-content">
+            <h1>Hi, I'm Esmira</h1>
+            <p>
+              I'm a passionate developer who enjoys building beautiful,
+              user-friendly interfaces and experimenting with modern web
+              technologies. I focus on clean, accessible design and enjoy
+              learning new tools and workflows.
+            </p>
+            <p>
+              Explore my portfolio to see projects I've built, or get in touch
+              via the contact page.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© <span id="year"></span> Esmira Aghamedova — All rights reserved.</p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../JS/theme-toggle.js"></script>
+  </body>
+</html>

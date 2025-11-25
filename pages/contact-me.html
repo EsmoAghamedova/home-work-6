@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/contact-me.css" />
+    <link rel="shortcut icon" href="../img/logo/logo.png" type="image/x-icon" />
+    <title>Contact — Esmira Aghamedova</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../img/logo/logo.png" alt="logo"
+          /></a>
+        </div>
+        <nav>
+          <div class="nav-pill">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about-me.html">About Me</a></li>
+              <li><a href="./my-projects.html">Portfolio</a></li>
+              <li>
+                <a href="./contact-me.html" aria-current="page">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+          title="Toggle theme"
+        >
+          <span class="icon">🌙</span>
+          <span class="label">Dark</span>
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <section class="card contact-card">
+        <h1>Contact Me</h1>
+        <p>Have a question or want to work together? Send me a message.</p>
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+
+          <button type="submit" class="cta">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© <span id="year"></span> Esmira Aghamedova — All rights reserved.</p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="../JS/theme-toggle.js"></script>
+  </body>
+</html>

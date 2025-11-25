@@ -1,0 +1,40 @@
+/* Page-specific styles for About Me */
+.about-card {
+    padding: 28px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatar img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-content h1 {
+    margin: 0 0 8px 0;
+    color: var(--primary);
+}
+
+.about-content p {
+    margin: 8px 0;
+    color: var(--text);
+}
+
+@media (max-width:900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center
+    }
+
+    .avatar {
+        justify-self: center
+    }
+}
