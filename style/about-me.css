@@ -138,6 +138,7 @@
         min-height: 40px;
     }
 }
+
 .about-content.no-avatar {
     display: flex;
     flex-direction: column;
