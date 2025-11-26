@@ -1,8 +1,3 @@
-/* ============================
-   ABOUT ME PAGE — FULL CSS
-============================ */
-
-/* --- 2-column layout: About | Tech Stack --- */
 .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,10 +9,6 @@
         grid-template-columns: 1fr;
     }
 }
-
-/* ============================
-   ABOUT CARD
-============================ */
 
 .about-card {
     padding: 18px;
@@ -62,11 +53,6 @@
     }
 }
 
-
-/* ============================
-   TECH STACK
-============================ */
-
 .tech-stack {
     padding: 18px;
     margin-top: 0;
@@ -84,14 +70,12 @@
     font-size: 0.9rem;
 }
 
-/* BADGES IN A SIMPLE COLUMN */
 .tech-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
 }
 
-/* SMALL BADGES */
 .tech-badge {
     position: relative;
     display: flex;
@@ -109,18 +93,15 @@
     transition: background 150ms ease, color 150ms ease;
 }
 
-/* EMOJI SIZE */
 .tech-emoji {
     font-size: 1.15rem;
 }
 
-/* HOVER EFFECT — show tooltip INSIDE badge */
 .tech-badge:hover {
     background: rgba(124, 58, 237, 0.12);
     color: var(--primary);
 }
 
-/* tooltip text replaces normal text */
 .tech-badge::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -138,7 +119,6 @@
     pointer-events: none;
 }
 
-/* hide original content on hover */
 .tech-badge:hover::after {
     opacity: 1;
 }
@@ -148,7 +128,6 @@
     opacity: 0;
 }
 
-/* MOBILE — 2 columns */
 @media (max-width: 600px) {
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
