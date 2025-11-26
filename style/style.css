@@ -67,6 +67,12 @@ body {
     flex-direction: column;
 }
 
+/* Utility class: disable page scroll and fit viewport height (use on index page only) */
+body.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* Glass header with modern spacing */
 header {
     position: sticky;
@@ -239,6 +245,73 @@ footer {
     margin-top: auto;
 }
 
+/* Hamburger menu styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    padding: 6px;
+    z-index: 100;
+}
+
+.hamburger-menu span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: all 300ms ease;
+}
+
+.hamburger-menu[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile menu wrapper */
+.mobile-menu-wrapper {
+    display: flex;
+    /* flex: 1; */
+}
+
+.mobile-menu-wrapper.open {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(18, 8, 26, 0.9), rgba(36, 12, 46, 0.7));
+    backdrop-filter: blur(12px);
+    padding: 20px 0;
+}
+
+.mobile-menu-wrapper.open .nav-pill {
+    flex-direction: column;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mobile-menu-wrapper.open ul {
+    flex-direction: column !important;
+    width: 100%;
+}
+
+.mobile-menu-wrapper.open ul li {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 !important;
+}
+
 /* Utility tweaks */
 .logo {
     display: inline-flex;
@@ -252,18 +325,147 @@ footer {
     display: block;
 }
 
-/* Small screens adjustments */
-@media (max-width:600px) {
-    nav ul li {
-        margin: 0 8px
+/* Medium screens (tablets) */
+@media (max-width:900px) {
+    .header-inner {
+        padding: 12px 16px;
+        gap: 12px;
+        width: min(100%, 95%);
+        position: relative;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-menu-wrapper {
+        display: none;
+    }
+
+    .mobile-menu-wrapper.open {
+        display: flex;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    nav ul li a {
+        font-size: 0.98rem;
+        padding: 7px 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .nav-pill {
+        padding: 8px 16px;
+    }
+
+    .theme-toggle {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small screens adjustments */
+@media (max-width:600px) {
     header {
-        padding: 10px 0
+        padding: 12px 0 0 0;
+        top: 10px;
+    }
+
+    .header-inner {
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 30px;
+        width: min(100%, 90%);
+        position: relative;
+    }
+
+    .logo img {
+        height: 36px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-menu-wrapper {
+        display: none;
+    }
+
+    .mobile-menu-wrapper.open {
+        display: flex;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 6px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+    }
+
+    .nav-pill {
+        padding: 6px 12px;
+        gap: 12px;
+    }
+
+    .theme-toggle {
+        padding: 4px 6px;
+        font-size: 0.85rem;
+    }
+
+    .theme-toggle .icon {
+        font-size: 14px;
+    }
+
+    .theme-toggle .label {
+        display: none;
     }
 
     .container {
-        margin: 18px auto
+        margin: 18px auto;
+    }
+}
+
+/* Extra small screens */
+@media (max-width:400px) {
+    .header-inner {
+        padding: 8px 10px;
+        gap: 6px;
+        position: relative;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    nav ul li {
+        margin: 0 4px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 5px 6px;
+    }
+
+    .nav-pill {
+        padding: 5px 10px;
+        gap: 8px;
+    }
+
+    .mobile-menu-wrapper.open {
+        top: 70px;
     }
 }
 
@@ -273,18 +475,9 @@ a:focus {
     outline-offset: 3px
 }
 
-@media (max-width:900px) {
-    .header-inner {
-        padding: 10px 12px;
-        gap: 10px
-    }
-
-    .logo img {
-        height: 40px
-    }
-
-    nav ul li a {
-        font-size: 0.98rem;
-        padding: 7px 10px
-    }
+main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }

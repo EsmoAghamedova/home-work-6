@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./img/logo/logo.png" type="image/x-icon" />
     <title>Esmira Aghamedova</title>
   </head>
-  <body>
+  <body class="no-scroll">
     <header>
       <div class="header-inner">
         <div class="logo">
@@ -26,7 +26,7 @@
             </ul>
           </div>
         </nav>
-        <button
+        <!-- <button
           id="theme-toggle"
           class="theme-toggle"
           aria-label="Toggle theme"
@@ -34,24 +34,50 @@
         >
           <span class="icon">🌙</span>
           <span class="label">Dark</span>
-        </button>
+        </button> -->
       </div>
     </header>
     <main>
       <section class="hero">
-        <div class="hero-inner">
-          <h1>Welcome to My Personal Website</h1>
-          <p>
-            Hi, I'm Esmira Aghamedova, a passionate developer and tech
-            enthusiast. Explore my projects and get to know more about me!
-          </p>
+        <section class="profile-section">
+        <div class="profile-info">
+          <h1 class="name">ESMIRA</h1>
+          <h2 class="surname">AGHAMEDOVA</h2>
+          <p class="role">Front-end developer & UI/UX Designer</p>
+          <div class="buttons">
+            <a href="pdf/Esmira_Aghamedova_CV.docx" download><button class="button">CV</button></a>
+            <a href="pages/Certificate.html"><button class="button">Certificates</button></a>
+          </div>
+          <div class="socials">
+            <a href="https://www.instagram.com/esmoo2009" target="_blank"
+              ><img src="img/logo/ri_instagram-fill.svg" alt="instagram"
+            /></a>
+            <a href="https://www.facebook.com/esmira.agamedova" target="_blank"
+              ><img src="img/logo/ic_baseline-facebook.svg" alt="facebook"
+            /></a>
+            <a href="https://github.com/EsmoAghamedova" target="_blank"
+              ><img src="img/logo/mdi_github.svg" alt="github"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/esmira-aghamedova-35671b252"
+              target="_blank"
+              ><img src="img/logo/mdi_linkedin.svg" alt="linkedin"
+            /></a>
+          </div>
         </div>
+      </section>
         <div>
             <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.4/build/spline-viewer.js"></script>
 <spline-viewer url="https://prod.spline.design/zE2yf9vP29Lh5CDE/scene.splinecode"></spline-viewer>
         </div>
       </section>
-    <footer></footer>
-    <script src="./JS/theme-toggle.js"></script>
+    <footer>
+      <p>© <span id="year"></span> Esmira Aghamedova — All rights reserved.</p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <!-- <script src="./JS/theme-toggle.js"></script> -->
+    <script src="./JS/header-responsive.js"></script>
   </body>
 </html>

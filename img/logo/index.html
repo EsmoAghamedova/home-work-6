@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/Home.css" />
+    <title>Portfolio | Esmira Aghamedova</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <div class="logo-burger">
+          <div class="logo">ESMIRA.</div>
+          <button class="burger-menu" id="burgerBtn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="nav" id="mainNav">
+          <a href="index.html">HOME</a>
+          <a href="pages/About-me.html">ABOUT ME</a>
+          <a href="pages/Projects.html">PROJECTS</a>
+          <a href="pages/Contact.html">CONTACT ME</a>
+        </nav>
+      </header>
+      <section class="profile-section">
+        <div class="profile-info">
+          <h1 class="name">ESMIRA</h1>
+          <h2 class="surname">AGHAMEDOVA</h2>
+          <p class="role">Front-end developer & UI/UX Designer</p>
+          <div class="buttons">
+            <a href="pdf/Esmira_Aghamedova_CV.docx" download><button class="button">CV</button></a>
+            <a href="pages/Certificate.html"><button class="button">Certificates</button></a>
+          </div>
+          <div class="socials">
+            <a href="https://www.instagram.com/esmoo2009" target="_blank"
+              ><img src="img/ri_instagram-fill.svg" alt="instagram"
+            /></a>
+            <a href="https://www.facebook.com/esmira.agamedova" target="_blank"
+              ><img src="img/ic_baseline-facebook.svg" alt="facebook"
+            /></a>
+            <a href="https://github.com/EsmoAghamedova" target="_blank"
+              ><img src="img/mdi_github.svg" alt="github"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/esmira-aghamedova-35671b252"
+              target="_blank"
+              ><img src="img/mdi_linkedin.svg" alt="linkedin"
+            /></a>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <a href="https://tbceducation.ge" target="_blank"
+          ><img src="img/tbc-logo.png" alt="TBC Logo"
+        /></a>
+      </footer>
+    </main>
+    <script>
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mainNav = document.getElementById("mainNav");
+      burgerBtn.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

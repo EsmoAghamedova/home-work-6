@@ -39,28 +39,115 @@
         </button>
       </div>
     </header>
-    <main class="container">
-      <section class="card about-card">
-        <div class="about-grid">
-          <div class="avatar">
-            <img src="../img/logo/logo.png" alt="Esmira avatar" />
+    <main class="container about-wrapper">
+      <!-- LEFT SIDE -->
+      <section class="card about-card" aria-labelledby="about-heading">
+  <div class="about-content no-avatar">
+    <h1 id="about-heading">Hi — I’m Esmira</h1>
+
+    <p>
+      I’m a web designer and front-end enthusiast who builds clean, accessible interfaces with careful attention to detail. I specialize in HTML and CSS and I’m actively leveling up my JavaScript, TypeScript, and React skills to create scalable, production-ready UI.
+    </p>
+
+    <p>
+      I enjoy turning concepts into intuitive products — from layout structure and responsive grids to component logic and accessible interactions. My focus is on consistency, performance, and user flow: small choices should produce smooth, meaningful experiences.
+    </p>
+
+    <h3>Currently improving</h3>
+    <ul>
+      <li>Writing cleaner, maintainable JavaScript and reusable components</li>
+      <li>Design systems, responsive patterns, and cross-device polish</li>
+      <li>Version control workflows with Git &amp; GitHub</li>
+      <li>Practical TypeScript for safer, scalable codebases</li>
+    </ul>
+
+    <p>
+      I’m ambitious, curious, and project-driven — I build, test, iterate, and learn fast. Outside of coding I draw inspiration from music, digital art, and minimalist UI. I’m focused on making things that look great and actually work.
+    </p>
+
+    <p class="call-to-action">
+      Want to collaborate or see my work? Check my
+      <a href="./my-projects.html">portfolio</a> or
+      <a href="./contact-me.html">get in touch</a>.
+    </p>
+  </div>
+</section>
+
+
+      <!-- RIGHT SIDE -->
+      <section class="card tech-stack">
+        <h2>Tech Stack</h2>
+        <p class="tech-intro">
+          Languages, tools and platforms I use to build products.
+        </p>
+
+        <div class="tech-grid tech-list">
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Markup language for structuring web content"
+          >
+            <span class="tech-emoji">🌐</span>
+            <span class="tech-text">HTML</span>
           </div>
-          <div class="about-content">
-            <h1>Hi, I'm Esmira</h1>
-            <p>
-              I'm a passionate developer who enjoys building beautiful,
-              user-friendly interfaces and experimenting with modern web
-              technologies. I focus on clean, accessible design and enjoy
-              learning new tools and workflows.
-            </p>
-            <p>
-              Explore my portfolio to see projects I've built, or get in touch
-              via the contact page.
-            </p>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Styling and layout for the web"
+          >
+            <span class="tech-emoji">🎨</span>
+            <span class="tech-text">CSS</span>
+          </div>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Interactive behaviour using modern JavaScript"
+          >
+            <span class="tech-emoji">⚡</span>
+            <span class="tech-text">JavaScript</span>
+          </div>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Typed JavaScript for safer codebases"
+          >
+            <span class="tech-emoji">🧩</span>
+            <span class="tech-text">TypeScript</span>
+          </div>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Versatile backend & scripting language"
+          >
+            <span class="tech-emoji">🐍</span>
+            <span class="tech-text">Python</span>
+          </div>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Design, prototyping and collaboration"
+          >
+            <span class="tech-emoji">🎛️</span>
+            <span class="tech-text">Figma</span>
+          </div>
+
+          <div
+            class="tech-badge"
+            tabindex="0"
+            data-tooltip="Source control and hosting (Git + GitHub)"
+          >
+            <span class="tech-emoji">🔧</span>
+            <span class="tech-text">Git / GitHub</span>
           </div>
         </div>
       </section>
     </main>
+
     <footer>
       <p>© <span id="year"></span> Esmira Aghamedova — All rights reserved.</p>
     </footer>
@@ -68,5 +155,6 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="../JS/theme-toggle.js"></script>
+    <script src="../JS/header-responsive.js"></script>
   </body>
 </html>

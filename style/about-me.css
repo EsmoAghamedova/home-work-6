@@ -1,40 +1,168 @@
-/* Page-specific styles for About Me */
+/* ============================
+   ABOUT ME PAGE — FULL CSS
+============================ */
+
+/* --- 2-column layout: About | Tech Stack --- */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================
+   ABOUT CARD
+============================ */
+
 .about-card {
-    padding: 28px;
+    padding: 18px;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 20px;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
     align-items: center;
 }
 
 .avatar img {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .about-content h1 {
-    margin: 0 0 8px 0;
+    margin: 0 0 6px 0;
     color: var(--primary);
+    font-size: 1.35rem;
 }
 
 .about-content p {
-    margin: 8px 0;
+    margin: 6px 0;
     color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.35;
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .about-grid {
         grid-template-columns: 1fr;
-        text-align: center
+        text-align: center;
     }
 
     .avatar {
-        justify-self: center
+        justify-self: center;
     }
+}
+
+
+/* ============================
+   TECH STACK
+============================ */
+
+.tech-stack {
+    padding: 18px;
+    margin-top: 0;
+}
+
+.tech-stack h2 {
+    margin: 0 0 6px 0;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.tech-stack .tech-intro {
+    margin: 0 0 10px 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* BADGES IN A SIMPLE COLUMN */
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+/* SMALL BADGES */
+.tech-badge {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    font-size: 0.9rem;
+    color: var(--text);
+    min-height: 44px;
+    font-weight: 700;
+    overflow: hidden;
+    transition: background 150ms ease, color 150ms ease;
+}
+
+/* EMOJI SIZE */
+.tech-emoji {
+    font-size: 1.15rem;
+}
+
+/* HOVER EFFECT — show tooltip INSIDE badge */
+.tech-badge:hover {
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--primary);
+}
+
+/* tooltip text replaces normal text */
+.tech-badge::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    font-size: 0.85rem;
+    color: var(--primary);
+    padding: 0 10px;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+/* hide original content on hover */
+.tech-badge:hover::after {
+    opacity: 1;
+}
+
+.tech-badge:hover .tech-text,
+.tech-badge:hover .tech-emoji {
+    opacity: 0;
+}
+
+/* MOBILE — 2 columns */
+@media (max-width: 600px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-badge {
+        padding: 8px 10px;
+        min-height: 40px;
+    }
+}
+.about-content.no-avatar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 750px;
+    margin: 0 auto;
 }
