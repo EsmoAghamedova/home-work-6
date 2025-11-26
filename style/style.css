@@ -22,7 +22,7 @@ html.dark {
     --glass-frost: rgba(124, 58, 237, 0.06);
 }
 
-html.light {
+/* html.light {
     --bg: #f8f7fc;
     --surface: rgba(255, 255, 255, 0.98);
     --muted: #7c3aed;
@@ -30,9 +30,9 @@ html.light {
     --primary: #a259ec;
     --accent: #e0aaff;
     --glass-frost: rgba(220, 210, 255, 0.7);
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         --bg: #f8f7fc;
         --surface: rgba(255, 255, 255, 0.98);
@@ -42,7 +42,7 @@ html.light {
         --accent: #e0aaff;
         --glass-frost: rgba(220, 210, 255, 0.7);
     }
-}
+} */
 
 .dark {
     background-color: var(--bg);
