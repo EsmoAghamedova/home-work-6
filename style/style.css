@@ -461,3 +461,20 @@ main {
     flex-direction: column;
     overflow: hidden;
 }
+
+.button {
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid #F4F4F5;
+    background: transparent;
+    color: #F4F4F5;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: #222;
+    border-color: var(--primary);
+}
